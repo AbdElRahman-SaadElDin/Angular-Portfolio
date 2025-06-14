@@ -7,17 +7,10 @@
   </a>
 
   <ul class="navbar-links">
+    @for(item of nav ;track item.id){
     <li>
-      <a href="#hero"><i class="fa fa-home"></i> Home</a>
+      <a href="#{{item.id}}"><i class="{{item.icon}}"></i> {{item.title}}</a>
     </li>
-    <li>
-      <a href="#about"><i class="fa fa-user"></i> About</a>
-    </li>
-    <li>
-      <a href="#skill"><i class="fa fa-cogs"></i> Skills</a>
-    </li>
-    <li>
-      <a href="#projects"><i class="fa fa-briefcase"></i> Projects</a>
-    </li>
+    }
   </ul>
 </nav>

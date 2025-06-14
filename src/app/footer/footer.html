@@ -11,27 +11,15 @@
       <h4>Contact Us</h4>
 
       <div class="footer-social">
-        <a href="mailto:abdelrahman.mohamed6110@gmail.com" class="footer-email">
-          <i class="fa fa-envelope"></i>
-        </a>
+        <!-- Loop on Contact me list -->
+        @for(contact of contacts ;track contact.label){
         <a
-          href="https://www.facebook.com/AbdElRahmanSaad8/"
+          [href]="contact.link"
           target="_blank"
-          aria-label="Facebook"
-          ><i class="fa fa-facebook"></i
+          [attr.aria-label]="contact.label"
+          ><i [class]="contact.icon"></i
         ></a>
-        <a
-          href="https://github.com/AbdElRahman-SaadElDin"
-          target="_blank"
-          aria-label="GitHub"
-          ><i class="fa fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/abdelrahman-saad-eldin/"
-          target="_blank"
-          aria-label="LinkedIn"
-          ><i class="fa fa-linkedin"></i
-        ></a>
+        }
       </div>
     </div>
   </div>

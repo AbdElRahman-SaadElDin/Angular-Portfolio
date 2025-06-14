@@ -3,68 +3,33 @@
     Portfolio <span class="projects-underline"></span>
   </h2>
   <div class="projects-list">
+    <!-- Loop on Project list to display in a card -->
+    @for(project of projectList ;track project.id){
     <div class="project-card">
-      <img src="./project1.png" alt="Project 1" class="project-img" />
-      <h3 class="project-name">Landing Page</h3>
+      <img
+        src="{{project.img}}"
+        alt="Project {{project.id}}"
+        class="project-img"
+      />
+      <h3 class="project-name">{{project.title}}</h3>
       <div class="project-tech">
-        <strong>Technologies:</strong> TypeScript, Localstorage, SCSS, Bootstrap
+        <strong>Technologies:</strong>{{project.technologies}}
       </div>
       <div class="project-btns">
         <a
-          href="https://abdelrahman-saadeldin.github.io/Lookscout-responsive/"
+          href="{{project.demoRef}}"
           class="project-btn project-btn-demo"
           target="_blank"
           >{{demo}}</a
         >
         <a
-          href="https://github.com/AbdElRahman-SaadElDin/Lookscout-responsive"
+          href="{{project.sourceRef}}"
           class="project-btn project-btn-code"
           target="_blank"
           >{{code}}</a
         >
       </div>
     </div>
-    <div class="project-card">
-      <img src="./project2.png" alt="Project 2" class="project-img" />
-      <h3 class="project-name">TODO App</h3>
-      <div class="project-tech">
-        <strong>Technologies:</strong> HTML5, CSS3, JavaScript, Localstorage
-      </div>
-      <div class="project-btns">
-        <a
-          href="https://abdelrahman-saadeldin.github.io/TodoApp/"
-          class="project-btn project-btn-demo"
-          target="_blank"
-          >{{demo}}</a
-        >
-        <a
-          href="https://github.com/AbdElRahman-SaadElDin/TodoApp"
-          class="project-btn project-btn-code"
-          target="_blank"
-          >{{code}}</a
-        >
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="./project3.png" alt="Project 3" class="project-img" />
-      <h3 class="project-name">Portfolio Website</h3>
-      <div class="project-tech">
-        <strong>Technologies:</strong> Angular, HTML5, SASS, Bootstrap
-      </div>
-      <div class="project-btns">
-        <a
-          href="https://abdelrahman-saadeldin.github.io/Finsweet-landing-page-ITI/"
-          class="project-btn project-btn-demo"
-          target="_blank"
-          >{{demo}}</a
-        >
-        <a
-          href="https://github.com/AbdElRahman-SaadElDin/Finsweet-landing-page-ITI"
-          class="project-btn project-btn-code"
-          target="_blank"
-          >{{code}}</a
-        >
-      </div>
-    </div>
+    }
   </div>
 </section>
