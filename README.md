@@ -17,6 +17,7 @@ This is a modern, responsive personal portfolio web application built with Angul
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v16 or higher recommended)
 - [Angular CLI](https://angular.io/cli)
+- [font-awesome - The iconic toolkit](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css)
 
 ### Installation
 1. Clone the repository:
@@ -50,14 +51,4 @@ This is a modern, responsive personal portfolio web application built with Angul
 - Update social media and contact links in the footer.
 
 ## Deployment
-You can deploy this portfolio to any static hosting service (Netlify, Vercel, GitHub Pages, etc.) after building the project:
-```sh
-ng build --configuration production
-```
-The output will be in the `dist/` folder.
-
-## License
-This project is open source and available under the [MIT License](LICENSE).
-
----
-Feel free to fork, customize, and use this portfolio as your own!
+https://abdelrahman-saadeldin.netlify.app/
